@@ -1,10 +1,9 @@
 {
-  "ver": "1.0.6",
+  "ver": "1.0.8",
   "importer": "sprite-atlas",
   "imported": true,
   "uuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a",
   "files": [
-    ".plist",
     ".json"
   ],
   "subMetas": {
@@ -33,9 +32,21 @@
         "packable": true,
         "isUuid": true,
         "imageUuidOrDatabaseUri": "0df8ca16-80dc-4bd2-8e52-21c87073fd28@6c48a",
-        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a"
+        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"
@@ -67,9 +78,21 @@
         "packable": true,
         "isUuid": true,
         "imageUuidOrDatabaseUri": "0df8ca16-80dc-4bd2-8e52-21c87073fd28@6c48a",
-        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a"
+        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"
@@ -101,9 +124,21 @@
         "packable": true,
         "isUuid": true,
         "imageUuidOrDatabaseUri": "0df8ca16-80dc-4bd2-8e52-21c87073fd28@6c48a",
-        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a"
+        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"
@@ -135,9 +170,21 @@
         "packable": true,
         "isUuid": true,
         "imageUuidOrDatabaseUri": "0df8ca16-80dc-4bd2-8e52-21c87073fd28@6c48a",
-        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a"
+        "atlasUuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"

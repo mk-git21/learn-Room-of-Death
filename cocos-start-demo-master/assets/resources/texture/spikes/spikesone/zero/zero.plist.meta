@@ -1,10 +1,9 @@
 {
-  "ver": "1.0.6",
+  "ver": "1.0.8",
   "importer": "sprite-atlas",
   "imported": true,
   "uuid": "d8c93eb0-a32f-43d0-b4c9-f5ca3f8e1d7b",
   "files": [
-    ".plist",
     ".json"
   ],
   "subMetas": {
@@ -33,9 +32,21 @@
         "packable": true,
         "isUuid": true,
         "imageUuidOrDatabaseUri": "e8549e00-cd66-4099-97be-b6af28cc8006@6c48a",
-        "atlasUuid": "d8c93eb0-a32f-43d0-b4c9-f5ca3f8e1d7b"
+        "atlasUuid": "d8c93eb0-a32f-43d0-b4c9-f5ca3f8e1d7b",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.12",
       "imported": true,
       "files": [
         ".json"
