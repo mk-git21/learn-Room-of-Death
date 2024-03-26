@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "Battle",
+    "_name": "BattleScene",
     "_objFlags": 0,
     "_native": "",
     "scene": {
