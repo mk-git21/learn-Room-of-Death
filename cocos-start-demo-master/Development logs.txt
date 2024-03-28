@@ -1,0 +1,4 @@
+3.28
+TileManager     设置图片、大小和坐标
+TileMapManager  读取配置、创建地图瓦片节点、调用初始化
+Utils/index     封装一个创建节点的工具方法，在创建时添加UITransform、设置layer为UI_2D

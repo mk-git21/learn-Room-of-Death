@@ -9,9 +9,9 @@ export class BattleScene extends Component {
     }
 
     generateTileMap() {
-        const stage = new Node();
+        const stage = new Node('stage');
         stage.parent = this.node;
-        const tileMap = new Node();
+        const tileMap = new Node('tileMap');
         tileMap.parent = this.node;
         const tileMapManager = tileMap.addComponent(TileMapManager);
         tileMapManager.init();
