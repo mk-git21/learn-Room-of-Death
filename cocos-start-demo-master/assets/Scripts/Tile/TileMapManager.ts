@@ -4,22 +4,21 @@
 import { _decorator, Component, Layers, Node, resources, Sprite, SpriteFrame, UITransform, v3 } from 'cc';
 import Levels from '../../Levels';
 import { TileManager } from './TileManager';
-import { createUINode } from '../../Utils';
-const { ccclass, property } = _decorator;
+import { createUINode, randomRange } from '../../Utils';
+import DataManager from '../../Runtime/DataManager';
+import ResourceManager from '../../Runtime/ResourceManager';
 
-export const TILE_WIDTH = 55
-export const TILE_HEIGHT = 55
+const { ccclass, property } = _decorator;
 
 @ccclass('TileMapManager')
 export class TileMapManager extends Component {
 
     async init() {
         //加载资源
-        const spriteFrames = await this.loadRes();
-        console.log('spriteFrames', spriteFrames);
+        const spriteFrames = await ResourceManager.Instance.loadDir('texture/tile/tile');
 
         //读取关卡配置
-        const { mapInfo } = Levels[`level${1}`];
+        const mapInfo = DataManager.Instance.mapInfo;
         for (let i = 0; i < mapInfo.length; i++) {
             const column = mapInfo[i];
             for (let j = 0; j < column.length; j++) {
@@ -28,8 +27,12 @@ export class TileMapManager extends Component {
                 if (item.src == null || item.type == null) {
                     continue
                 }
-                //单个瓦片图片
-                const imgSrc = `tile (${item.src})`;
+                //单个瓦片图片,部分地块随机
+                let num = item.src;
+                if ((num == 1 || num == 5 || num ==9)&&i%2==0&&j%2==0) {
+                    num += randomRange(0, 4);
+                }
+                const imgSrc = `tile (${num})`;
                 const spriteFrame = spriteFrames.find(v => v.name === imgSrc) || spriteFrames[0];
                 //初始化瓦片属性
                 const node = createUINode(imgSrc);
@@ -39,19 +42,6 @@ export class TileMapManager extends Component {
             }
 
         }
-    }
-
-    loadRes() {
-        return new Promise<SpriteFrame[]>((resolve, reject) => {
-            resources.loadDir('texture/tile/tile', SpriteFrame, (err, res: SpriteFrame[]) => {
-                if (err) {
-                    reject(err);
-                    return
-                }
-                resolve(res)
-            })
-        })
-
     }
 }
 
