@@ -7,6 +7,7 @@ import { TileManager } from './TileManager';
 import { createUINode, randomRange } from '../../Utils';
 import DataManager from '../../Runtime/DataManager';
 import ResourceManager from '../../Runtime/ResourceManager';
+import EventManager from '../../Runtime/EventManager';
 
 const { ccclass, property } = _decorator;
 
@@ -16,7 +17,6 @@ export class TileMapManager extends Component {
     async init() {
         //加载资源
         const spriteFrames = await ResourceManager.Instance.loadDir('texture/tile/tile');
-
         //读取关卡配置
         const mapInfo = DataManager.Instance.mapInfo;
         for (let i = 0; i < mapInfo.length; i++) {
@@ -40,7 +40,6 @@ export class TileMapManager extends Component {
                 tileManager.init(spriteFrame, i, j);
                 node.parent = this.node;
             }
-
         }
     }
 }

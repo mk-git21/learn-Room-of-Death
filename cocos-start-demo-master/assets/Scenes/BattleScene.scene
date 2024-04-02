@@ -50,7 +50,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 41
+      "__id__": 43
     },
     "_id": "eaa5b88d-39eb-409e-9640-0b00d1849d2c"
   },
@@ -75,16 +75,16 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 37
-      },
-      {
-        "__id__": 38
-      },
-      {
         "__id__": 39
       },
       {
         "__id__": 40
+      },
+      {
+        "__id__": 41
+      },
+      {
+        "__id__": 42
       }
     ],
     "_prefab": null,
@@ -366,19 +366,22 @@
         "__id__": 26
       },
       {
-        "__id__": 30
+        "__id__": 31
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 34
-      },
-      {
         "__id__": 35
       },
       {
         "__id__": 36
+      },
+      {
+        "__id__": 37
+      },
+      {
+        "__id__": 38
       }
     ],
     "_prefab": null,
@@ -1181,7 +1184,11 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 30
+      }
+    ],
     "_interactable": true,
     "_transition": 3,
     "_normalColor": {
@@ -1227,6 +1234,16 @@
     "_id": "c4pTj3FTlA0bh4VCwrFbu0"
   },
   {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 9
+    },
+    "component": "",
+    "_componentId": "93358POB/tNUowEV/Ch5tzO",
+    "handler": "handCtrl",
+    "customEventData": ""
+  },
+  {
     "__type__": "cc.Node",
     "_name": "controllerButton6",
     "_objFlags": 0,
@@ -1237,13 +1254,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 31
-      },
-      {
         "__id__": 32
       },
       {
         "__id__": 33
+      },
+      {
+        "__id__": 34
       }
     ],
     "_prefab": null,
@@ -1281,7 +1298,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 30
+      "__id__": 31
     },
     "_enabled": true,
     "__prefab": null,
@@ -1302,7 +1319,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 30
+      "__id__": 31
     },
     "_enabled": true,
     "__prefab": null,
@@ -1340,7 +1357,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 30
+      "__id__": 31
     },
     "_enabled": true,
     "__prefab": null,
@@ -1385,7 +1402,7 @@
     "_duration": 0.1,
     "_zoomScale": 1.2,
     "_target": {
-      "__id__": 30
+      "__id__": 31
     },
     "_id": "0e7t9s0zdGhIEEW++T3Sd7"
   },
@@ -1471,6 +1488,17 @@
     "_id": "42RPRkv81J75WDuSeTCZOl"
   },
   {
+    "__type__": "93358POB/tNUowEV/Ch5tzO",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 9
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_id": "79+fD7B8RD+rA16S2coM6t"
+  },
+  {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
@@ -1549,22 +1577,22 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 42
-    },
-    "shadows": {
-      "__id__": 43
-    },
-    "_skybox": {
       "__id__": 44
     },
-    "fog": {
+    "shadows": {
       "__id__": 45
     },
-    "octree": {
+    "_skybox": {
       "__id__": 46
     },
-    "lightProbeInfo": {
+    "fog": {
       "__id__": 47
+    },
+    "octree": {
+      "__id__": 48
+    },
+    "lightProbeInfo": {
+      "__id__": 49
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false

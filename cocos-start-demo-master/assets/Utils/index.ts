@@ -1,4 +1,4 @@
-import {Layers, Node, UITransform, Vec2, v2} from 'cc'
+import {Layers, Node, UITransform, v2} from 'cc'
 
 
 /**
@@ -16,7 +16,5 @@ export const createUINode=(name: string='')=>{
 }
 
 /**范围内随机数 */
-export const randomRange = (start: number, end: number) => {
-    return Math.floor(start + (end - start) * Math.random());
-}
+export const randomRange = (start: number, end: number) => { return Math.floor(start + (end - start) * Math.random()); }
 

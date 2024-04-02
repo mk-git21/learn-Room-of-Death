@@ -20,3 +20,9 @@ export enum TILE_TYPE_ENUM {
     /**地板 */
     FLOOR = 'FLOOR',
 }
+
+/**事件类型 */
+export enum EVENT_ENUM {
+    /**切换下一关 */
+    NEXT_LEVEL = 'NEXT_LEVEL',
+}

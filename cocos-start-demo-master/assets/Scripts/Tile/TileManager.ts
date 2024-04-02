@@ -4,6 +4,7 @@
 
 import { _decorator, Component, Layers, Node, resources, Sprite, SpriteFrame, UITransform, v3 } from 'cc';
 import Levels from '../../Levels';
+import EventManager from '../../Runtime/EventManager';
 const { ccclass, property } = _decorator;
 
 export const TILE_WIDTH = 55
