@@ -7,6 +7,7 @@ import { TILE_WIDTH } from './Tile/TileManager';
 import DataManager from '../Runtime/DataManager';
 import EventManager from '../Runtime/EventManager';
 import { EVENT_ENUM } from '../Enums';
+import { PlayerManager } from './Player/PlayerManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleScene')
@@ -15,6 +16,8 @@ export class BattleScene extends Component {
     private level: ILevel;
     //当前战斗舞台节点
     private stage: Node;
+    //玩家节点
+    private player: Node;
 
     onLoad() {
         EventManager.Instance.on(EVENT_ENUM.NEXT_LEVEL, this.nextLevel, this)
@@ -41,6 +44,7 @@ export class BattleScene extends Component {
             DataManager.Instance.mapColumnCount = this.level.mapInfo[0].length;
 
             this.generateTileMap();
+            this.generatePlayer();
         }
     }
 
@@ -69,6 +73,14 @@ export class BattleScene extends Component {
         tileMapManager.init();
 
         this.adaptPos();
+    }
+
+    /**创建角色 */
+    generatePlayer() {
+        this.player = createUINode('player');
+        this.player.parent = this.stage;
+        const playerManager = this.player.addComponent(PlayerManager);
+        playerManager.init()
     }
 
     /**战斗场景位置适配*/
