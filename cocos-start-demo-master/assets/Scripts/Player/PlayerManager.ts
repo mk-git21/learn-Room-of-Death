@@ -1,16 +1,80 @@
 import { _decorator, Component, Node, Animation, Sprite, UITransform, animation, SpriteFrame, AnimationClip } from 'cc';
 import { TILE_HEIGHT, TILE_WIDTH } from '../Tile/TileManager';
 import ResourceManager from '../../Runtime/ResourceManager';
+import { CONTROLLER_ENUM, EVENT_ENUM } from '../../Enums';
+import EventManager from '../../Runtime/EventManager';
 const { ccclass, property } = _decorator;
 
 /**帧速度 */
-const ANIMATION_SPEED=1/8
+const ANIMATION_SPEED = 1 / 8
 
 @ccclass('PlayerManager')
 export class PlayerManager extends Component {
-    
-    async init() {
 
+    //x,y代表的是瓦片坐标
+    private x: number = 0;
+    private y: number = 0;
+    private targetX: number = 0;
+    private targetY: number = 0;
+
+    //移动速度
+    private moveSpeed: number = 1 / 10;
+
+    init() {
+        this.render()
+        EventManager.Instance.on(EVENT_ENUM.PLAYER_CTRL,this.move,this);
+    }
+
+    onDestroy() {
+        EventManager.Instance.off(EVENT_ENUM.PLAYER_CTRL, this.move);
+    }
+
+    update(dt: number) {
+        this.updateXY();
+        //将瓦片坐标设置为实际坐标
+        this.node.setPosition(this.x * TILE_WIDTH-TILE_WIDTH*1.5, this.y * TILE_HEIGHT+TILE_HEIGHT*1.5);
+    }
+
+    updateXY() {
+        if (this.x < this.targetX) {
+            this.x += this.moveSpeed;
+        } else if (this.x > this.targetX){
+            this.x -= this.moveSpeed;
+        }
+
+        if (this.y < this.targetY) {
+            this.y += this.moveSpeed;
+        } else if (this.y > this.targetY){
+            this.y -= this.moveSpeed;
+        }
+
+        if (Math.abs(this.x - this.targetX) < 0.1 && Math.abs(this.y - this.targetY) < 0.1) {
+            this.x = this.targetX;
+            this.y = this.targetY;
+        }
+    }
+
+    move(inputDirection: CONTROLLER_ENUM) {
+        switch (inputDirection) {
+            case CONTROLLER_ENUM.TOP:
+                this.targetY += 1;
+                break;
+            case CONTROLLER_ENUM.BOTTOM:
+                this.targetY -= 1;
+                break;
+            case CONTROLLER_ENUM.LEFT:
+                this.targetX -= 1;
+                break;
+            case CONTROLLER_ENUM.RIGHT:
+                this.targetX += 1;
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    async render() {
         //设置精灵尺寸调整模式
         const sprite = this.node.addComponent(Sprite);
         sprite.sizeMode = Sprite.SizeMode.CUSTOM;

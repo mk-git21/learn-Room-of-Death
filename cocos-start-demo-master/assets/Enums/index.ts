@@ -25,4 +25,23 @@ export enum TILE_TYPE_ENUM {
 export enum EVENT_ENUM {
     /**切换下一关 */
     NEXT_LEVEL = 'NEXT_LEVEL',
+    /**玩家控制 */
+    PLAYER_CTRL = 'PLAYER_CTRL',
 }
+
+/**移动类型 */
+export enum CONTROLLER_ENUM{
+    /**上 */
+    TOP = 'TOP',
+    /**下 */
+    BOTTOM = 'BOTTOM',
+    /**左 */
+    LEFT = 'LEFT',
+    /**右 */
+    RIGHT = 'RIGHT',
+    /**左转 */
+    TURN_LEFT = 'TURN_LEFT',
+    /**右转 */
+    TURN_RIGHT = 'TURN_RIGHT',
+}
+
